@@ -2,7 +2,7 @@ const todoList = document.querySelector('.todo__list');
 const todoForm = document.querySelector('.todo__form');
 const formInput = document.querySelector('.form__input');
 const selectFilter = document.querySelector('#filter');
-
+selectFilter.selectedIndex = 0;
 let todos = [];
 
 //check if local storage has data
