@@ -1,6 +1,8 @@
 const todoList = document.querySelector('.todo__list');
 const todoForm = document.querySelector('.todo__form');
 const formInput = document.querySelector('.form__input');
+const selectFilter = document.querySelector('#filter');
+
 let todos = [];
 
 //check if local storage has data
@@ -60,5 +62,34 @@ todoList.addEventListener('click' , function(event) {
     });
     markTodo.marked = !markTodo.marked;
     saveToLs()
+  }
+});
+
+//SELECT FILTER
+selectFilter.addEventListener('change', function(e){
+  console.log(e.target.value);
+  const items = todoList.querySelectorAll('.list__item');
+  if(e.target.value == 'marked'){   
+    items.forEach(elem => {
+      if(!elem.classList.contains('list__item--marked')){
+        elem.classList.add('hide');
+      } else {
+        elem.classList.remove('hide');
+      }
+    });
+  }
+  if(e.target.value == 'unmarked'){
+    items.forEach(elem => {
+      if(elem.classList.contains('list__item--marked')){
+        elem.classList.add('hide');
+      } else {
+        elem.classList.remove('hide');
+      }
+    });
+  }
+  if(e.target.value == 'all'){
+    items.forEach(elem => {      
+      elem.classList.remove('hide');
+    });
   }
 });

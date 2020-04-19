@@ -21,3 +21,9 @@
 .item__text{
   font-size: 20px;
 }
+.filter{
+  display: block;
+}
+.hide{
+  display: none;
+}
