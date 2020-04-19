@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>TODO Local Storage</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="todo">
+      <h1 class="todo__title">TODO Local Storage</h1>
+      <form class="todo__form" action="">
+        <input class="form__input input-field" type="text">
+        <button class="waves-effect waves-light btn" type="submit">Add todo</button>
+      </form>
+      <!-- <select name="" id="">
+        <option value="all">All</option>
+        <option value="all">Completed</option>
+        <option value="all">Uncompleted</option>
+      </select> -->
+      <ul class="todo__list collection">
+        
+      </ul>
+    </div>
+    
+  </div>
+  
+  <template id="tmpl">
+    <li class="list__item collection-item" data-id="">
+      <span class="item__text"></span>
+      <div class="btn__wrap">
+        <button class="item__mark waves-effect waves-light btn">Mark</button>
+        <button class="item__delete waves-effect waves-light btn red">Delete</button></div>     
+    </li>
+  </template>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+.todo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.todo__list{
+  width: 100%;
+}
+.list__item--marked .item__text{
+  text-decoration: line-through;
+  font-style: italic;
+}
+.list__item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item__text{
+  font-size: 20px;
+}
